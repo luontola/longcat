@@ -12,7 +12,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: junit:junit:4.5" level="project" />
-    <orderEntry type="library" name="Maven: org.easymock:easymock:2.4" level="project" />
     <orderEntry type="library" name="Maven: org.mockito:mockito-all:1.7" level="project" />
   </component>
 </module>
