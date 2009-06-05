@@ -1,3 +1,6 @@
+// Copyright © 2009, Esko Luontola. All Rights Reserved.
+// This software is released under the MIT License. See LICENSE.txt
+
 package longcat;
 
 import junit.framework.TestCase;

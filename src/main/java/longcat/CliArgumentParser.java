@@ -1,3 +1,6 @@
+// Copyright © 2009, Esko Luontola. All Rights Reserved.
+// This software is released under the MIT License. See LICENSE.txt
+
 package longcat;
 
 public class CliArgumentParser {
@@ -21,8 +24,6 @@ public class CliArgumentParser {
             return cat.toString();
         } else {
             return USAGE_INSTRUCTIONS;
-
         }
-
     }
 }
