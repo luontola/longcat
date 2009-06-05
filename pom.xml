@@ -8,7 +8,7 @@
     <version>0.1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Loncat</name>
+    <name>Longcat</name>
     <description>Longcat is looooooooooong</description>
     <url>http://github.com/orfjackal/longcat/</url>
     <inceptionYear>2009</inceptionYear>
