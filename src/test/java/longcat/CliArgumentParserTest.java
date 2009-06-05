@@ -30,4 +30,20 @@ public class CliArgumentParserTest extends TestCase {
         String out = cli.parseArguments("10000", "ft");
         assertEquals(dummyLongcat.toString(), out);
     }
+
+    public void test__Longcat_is_loooooooooooooooooooooong() {
+        String oooo = "oooooooooooooooooooooo";
+        when(factory.createLongcat(oooo.length())).thenReturn(dummyLongcat);
+        String out = cli.parseArguments("is", "l" + oooo + "ng");
+        assertEquals(dummyLongcat.toString(), out);
+    }
+
+    public void test__Longcat_is_short() {
+        try {
+            cli.parseArguments("is", "short");
+            fail();
+        } catch (IllegalArgumentException e) {
+            assertEquals("Not long: short", e.getMessage());
+        }
+    }
 }
