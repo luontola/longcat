@@ -95,6 +95,14 @@
                     <descriptors>
                         <descriptor>src/main/assembly/src.xml</descriptor>
                     </descriptors>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <archive>
+                        <manifest>
+                            <mainClass>longcat.Cli</mainClass>
+                        </manifest>
+                    </archive>
                 </configuration>
                 <executions>
                     <execution>
@@ -105,6 +113,18 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>longcat.Cli</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
             </plugin>
 
             <plugin>
