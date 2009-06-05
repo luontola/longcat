@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/assembly-1.1.0-SNAPSHOT.xsd">
+
+    <id>dist</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>true</includeBaseDirectory>
+
+    <dependencySets>
+
+        <!-- Fixed name for main jar -->
+        <dependencySet>
+            <outputDirectory>/</outputDirectory>
+            <includes>
+                <include>net.orfjackal.longcat:longcat:jar</include>
+            </includes>
+            <outputFileNameMapping>${artifact.artifactId}.${artifact.extension}</outputFileNameMapping>
+        </dependencySet>
+
+    </dependencySets>
+
+    <fileSets>
+
+        <!-- Startup files -->
+        <fileSet>
+            <outputDirectory>/</outputDirectory>
+            <directory>src/main/config</directory>
+        </fileSet>
+
+        <!-- Documentation -->
+        <fileSet>
+            <outputDirectory>/</outputDirectory>
+            <directory>..</directory>
+            <includes>
+                <include>*.txt</include>
+            </includes>
+        </fileSet>
+
+    </fileSets>
+
+</assembly>

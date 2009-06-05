@@ -93,6 +93,7 @@
                 <configuration>
                     <attach>false</attach>
                     <descriptors>
+                        <descriptor>src/main/assembly/dist.xml</descriptor>
                         <descriptor>src/main/assembly/src.xml</descriptor>
                     </descriptors>
                 </configuration>
