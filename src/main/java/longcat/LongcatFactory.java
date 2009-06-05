@@ -1,8 +1,8 @@
 package longcat;
 
-public class LongcatFactory {
+public interface LongcatFactory {
 
-    public Longcat createLongcat(int bodySize) {
-        return new Longcat(bodySize);
-    }
+    Longcat createLongcat(int bodySize);
+
+    Longcat createLongcat(int length, LengthUnit unit);
 }
