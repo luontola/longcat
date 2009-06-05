@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 
 public class LongcatFactoryTest extends TestCase {
 
-    private LongcatFactory factory = new LongcatFactory();
+    private LongcatFactory factory = new LongcatFactoryImpl();
 
     public void test__Longcat_with_body_size_0() {
         Longcat longcat = factory.createLongcat(0);
