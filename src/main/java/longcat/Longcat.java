@@ -31,11 +31,11 @@ public class Longcat {
     }
 
     public String getBody() {
-        String body = "";
+        StringBuilder body = new StringBuilder();
         for (int i = 0; i < bodySize; i++) {
-            body += BODY_ROW;
+            body.append(BODY_ROW);
         }
-        return body;
+        return body.toString();
     }
 
     public String toString() {
