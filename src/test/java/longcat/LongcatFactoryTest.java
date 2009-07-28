@@ -25,4 +25,19 @@ public class LongcatFactoryTest extends TestCase {
         Longcat longcat = factory.createLongcat(2);
         assertEquals(Longcat.HEAD_LINES + longcat.getBody() + Longcat.FEET_LINES, longcat.toString());
     }
+
+    public void test__Longcat_length_specified_in_meters() {
+        Longcat longcat = factory.createLongcat(1, LengthUnit.METERS);
+        int lines = LongcatFactoryImpl.lineCount(longcat.toString());
+        assertEquals(LengthUnit.LINES.from(1, LengthUnit.METERS), lines);
+    }
+
+    public void test__Too_short_longcat() {
+        try {
+            factory.createLongcat(0, LengthUnit.METERS);
+            fail();
+        } catch (IllegalArgumentException e) {
+            assertEquals("Longcat can not be that short!", e.getMessage());
+        }
+    }
 }

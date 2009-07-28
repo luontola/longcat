@@ -2,7 +2,7 @@ package longcat;
 
 public enum LengthUnit {
 
-    METERS("m", 1.0), FEET("ft", 0.3048), PETRONAS("petronas", 451.9), EIFFEL("eiffels", 300.65);
+    METERS("m", 1.0), FEET("ft", 0.3048), PETRONAS("petronas", 451.9), EIFFEL("eiffels", 300.65), LINES("lines", 0.009);
 
     private final String name;
     private final double lengthInMeters;

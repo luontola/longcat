@@ -27,11 +27,14 @@ public class Longcat {
     private final int bodySize;
 
     public Longcat(int bodySize) {
+        if (bodySize < 0) {
+            throw new IllegalArgumentException("Longcat can not be that short!");
+        }
         this.bodySize = bodySize;
     }
 
     public String getBody() {
-        StringBuilder body = new StringBuilder();
+        StringBuilder body = new StringBuilder(bodySize * BODY_LINE.length());
         for (int i = 0; i < bodySize; i++) {
             body.append(BODY_LINE);
         }
