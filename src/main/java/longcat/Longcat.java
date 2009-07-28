@@ -4,7 +4,7 @@ public class Longcat {
 
     // Source: http://encyclopediadramatica.com/Longcat
 
-    public static final String HEAD_ROW = "" +
+    public static final String HEAD_LINES = "" +
             "    /\\___/\\         \n" +
             "   /       \\         \n" +
             "  |  #    # |         \n" +
@@ -14,9 +14,9 @@ public class Longcat {
             "  / _______ ___   \\  \n" +
             "  |_____   \\   \\__/ \n" +
             "   |    \\__/         \n";
-    public static final String BODY_ROW = "" +
+    public static final String BODY_LINE = "" +
             "   |       |          \n";
-    public static final String FEET_ROW = "" +
+    public static final String FEET_LINES = "" +
             "   /        \\        \n" +
             "  /   ____   \\       \n" +
             "  |  /    \\  |       \n" +
@@ -33,12 +33,12 @@ public class Longcat {
     public String getBody() {
         StringBuilder body = new StringBuilder();
         for (int i = 0; i < bodySize; i++) {
-            body.append(BODY_ROW);
+            body.append(BODY_LINE);
         }
         return body.toString();
     }
 
     public String toString() {
-        return HEAD_ROW + getBody() + FEET_ROW;
+        return HEAD_LINES + getBody() + FEET_LINES;
     }
 }
